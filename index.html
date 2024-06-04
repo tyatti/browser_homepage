@@ -8,16 +8,9 @@
 </head>
 <body>
     <div id="container">
-        <div id="wallpaper">
-            <input type="file" id="localWallpaper" accept="image/*" onchange="changeWallpaperLocal(event)">
-            <input type="url" id="onlineWallpaper" placeholder="Enter image URL" onkeydown="changeWallpaperOnline(event)">
-        </div>
-        <div id="linkGrid" class="grid2x3"></div>
-        <button onclick="addLink()">Add Link</button>
+        <div id="linkGrid" class="grid"></div>
         <select id="gridLayout" onchange="changeGridLayout(event)">
-            <option value="grid2x3">2x3</option>
-            <option value="grid3x3">3x3</option>
-            <!-- Add more grid options here -->
+            <option value="grid4xUnlimited">4xUnlimited</option>
         </select>
     </div>
     <script src="script.js"></script>
