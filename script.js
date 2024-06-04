@@ -1,34 +1,27 @@
-function changeWallpaperLocal(event) {
-    const file = event.target.files[0];
-    const reader = new FileReader();
-    reader.onload = function(e) {
-        document.getElementById('container').style.backgroundImage = `url(${e.target.result})`;
-    };
-    reader.readAsDataURL(file);
-}
-
-function changeWallpaperOnline(event) {
-    if (event.key === 'Enter') {
-        const url = event.target.value;
-        document.getElementById('container').style.backgroundImage = `url(${url})`;
-    }
-}
-
-function addLink() {
-    const linkUrl = prompt("Enter the link URL:");
-    const linkText = prompt("Enter the link text:");
-    if (linkUrl && linkText) {
-        const linkIcon = document.createElement('a');
-        linkIcon.href = linkUrl;
-        linkIcon.target = '_blank';
-        linkIcon.className = 'link-icon';
-        linkIcon.textContent = linkText;
-        document.getElementById('linkGrid').appendChild(linkIcon);
-    }
-}
-
 function changeGridLayout(event) {
     const grid = document.getElementById('linkGrid');
     grid.className = '';
-    grid.classList.add(event.target.value);
+    grid.classList.add('grid');
 }
+
+// Add default links
+const defaultLinks = [
+    
+    { url: 'https://www.youtube.com', text: 'YouTube' },
+    { url: 'https://music.youtube.com/playlist?list=PLhKXRdIDf23Nd0lCY3bfKYyd5ZSSubJp_', text: 'yt music' },
+    
+    { url: 'https://ww8.manganelo.tv/manga/manga-nr964952', text: 'kokou no hito' },
+    { url: 'https://ww8.manganelo.tv/manga/manga-je954913', text: 'vagabond' },
+    { url: 'https://asuracomic.net/?order=update?order=update', text: 'asura scan' },
+];
+
+const linkGrid = document.getElementById('linkGrid');
+
+defaultLinks.forEach(link => {
+    const linkIcon = document.createElement('a');
+    linkIcon.href = link.url;
+    linkIcon.target = '_blank';
+    linkIcon.className = 'link-icon';
+    linkIcon.textContent = link.text;
+    linkGrid.appendChild(linkIcon);
+});
