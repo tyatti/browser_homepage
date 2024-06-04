@@ -13,12 +13,9 @@ body, html {
     justify-content: center;
     width: 100%;
     height: 100%;
+    background-image: url('1.jpeg');
     background-size: cover;
     background-position: center;
-}
-
-#wallpaper {
-    margin-bottom: 20px;
 }
 
 #linkGrid {
@@ -26,14 +23,9 @@ body, html {
     gap: 10px;
 }
 
-.grid2x3 {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-}
-
-.grid3x3 {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+.grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-auto-rows: minmax(100px, auto);
 }
 
 .link-icon {
