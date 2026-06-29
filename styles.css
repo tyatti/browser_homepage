@@ -1,42 +1,11 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
 
-#container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    background-image: url('vagabond.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-#linkGrid {
-    display: grid;
-    gap: 10px;
-}
-
-.grid {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    grid-auto-rows: minmax(100px, auto);
-}
-
-.link-icon {
-    width: 100px;
-    height: 100px;
-    background-color: rgba(255, 255, 255, 0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+h1{
+    text-transform: uppercase;
     text-align: center;
-    overflow: hidden;
+}
+img{
+    width: 70%;
+    height: 400px;
+    display: block;
+    margin: auto;
 }
